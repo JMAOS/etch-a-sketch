@@ -1,15 +1,15 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
 html, body{
     height: 100%;
     width: 100%;
+    background-color: black;
 }
 #container{
-    height: 480px;
-    width: 960px;
-    visibility: visible;
-}
-
-.square{
-    width: 150px;
-    height: 150px;
-    visibility: visible;
+    height: 90%;
+    width: 90%;
 }
