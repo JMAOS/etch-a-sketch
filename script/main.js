@@ -1,12 +1,12 @@
 
-const gridSize = 16; 
+const gridSize = 64; 
 const squareHeightWidth = 100 / gridSize;
 
 
 var element = document.querySelector("#container")
 element.style.backgroundColor = "blue";
 
-var square = [];
+let square = [];
 
 
 createGrid();
@@ -15,8 +15,8 @@ createGrid();
 
 function createGrid(){
 
-    for(i=0; i<gridSize; i++){
-        for(j=0; j<gridSize; j++){
+    for( let i=0; i<gridSize; i++){
+        for( let j=0; j<gridSize; j++){
             square[j + gridSize * i] = document.createElement("div");
             square[j + gridSize * i].style.backgroundColor = "white";
             square[j + gridSize * i].style.height = squareHeightWidth + "%";
@@ -26,7 +26,8 @@ function createGrid(){
             element.appendChild(square[j + gridSize * i]);
 
             square[j + gridSize * i].addEventListener("mouseenter", function(){
-                square.style.backgroundColor = "red";
+                console.log("Entered:" + (j + gridSize * i));
+                square[j + gridSize * i].style.backgroundColor = "blue";
             });
         }
 
