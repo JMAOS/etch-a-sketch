@@ -7,15 +7,19 @@
 html, body{
     height: 100%;
     width: 100%;
-    background-color: red;
+    background-color: brown;
 }
 #container{
     height: 90%;
     width: 90%;
+    margin-left: 5%;
 }
 
 #clearGridBtn{
-    border-radius: 10%;
-    max-width: 10%;
-    max-height: 8%
+    border-radius: 20%;
+    height: 2.5%;
+    width: 10%;
+    margin-left: 45%;
+    margin-bottom: 2%
+
 }

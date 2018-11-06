@@ -1,6 +1,6 @@
 
-const gridSize = 16; 
-const squareHeightWidth = 100 / gridSize;
+let gridSize = 16; 
+let squareHeightWidth = 100 / gridSize;
 
 
 var element = document.querySelector("#container")
@@ -36,8 +36,15 @@ function createGrid(){
 }
 
 function clearGrid(){
-    square.forEach(element => {
-        element.style.backgroundColor = "white";
-    });
+    gridSize = prompt("Please enter the grid size", "16");
+
+    if(gridSize != null){
+        square.forEach( s => {
+            element.removeChild(s);
+        });
+        squareHeightWidth = 100 / gridSize;
+        createGrid();
+    }
+
 }
 
