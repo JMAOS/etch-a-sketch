@@ -1,10 +1,10 @@
 
-const gridSize = 64; 
+const gridSize = 16; 
 const squareHeightWidth = 100 / gridSize;
 
 
 var element = document.querySelector("#container")
-element.style.backgroundColor = "blue";
+element.style.backgroundColor = "white";
 
 let square = [];
 
@@ -35,5 +35,9 @@ function createGrid(){
     }
 }
 
-
+function clearGrid(){
+    square.forEach(element => {
+        element.style.backgroundColor = "white";
+    });
+}
 

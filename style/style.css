@@ -7,9 +7,15 @@
 html, body{
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: red;
 }
 #container{
     height: 90%;
     width: 90%;
+}
+
+#clearGridBtn{
+    border-radius: 10%;
+    max-width: 10%;
+    max-height: 8%
 }
