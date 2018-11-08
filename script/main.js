@@ -23,6 +23,7 @@ function createGrid(){
             square[j + gridSize * i].style.width = squareHeightWidth + "%";
             square[j + gridSize * i].setAttribute("id", "square" + "X" + i + "Y" +j);
             square[j + gridSize * i].style.display = "inline-block";
+            square[j + gridSize * i].style.verticalAlign = "top";
             element.appendChild(square[j + gridSize * i]);
 
             square[j + gridSize * i].addEventListener("mouseenter", function(){
