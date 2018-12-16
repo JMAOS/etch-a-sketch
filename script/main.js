@@ -1,10 +1,11 @@
 
 let gridSize = 16; 
-let squareHeightWidth = 100 / gridSize;
+//let squareHeightWidth = 100 / gridSize;
 
 
 var element = document.querySelector("#content")
 element.style.backgroundColor = "white";
+element.style.gridTemplateColumns = "repeat(" + gridSize + ", 1fr)";
 
 let square = [];
 
@@ -20,11 +21,11 @@ function createGrid(){
         for( let j=0; j<gridSize; j++){
             square[j + gridSize * i] = document.createElement("div");
             square[j + gridSize * i].style.backgroundColor = "white";
-            square[j + gridSize * i].style.height = squareHeightWidth + "%";
-            square[j + gridSize * i].style.width = squareHeightWidth + "%";
+            //square[j + gridSize * i].style.height = squareHeightWidth + "%";
+            //square[j + gridSize * i].style.width = squareHeightWidth + "%";
             square[j + gridSize * i].setAttribute("id", "square" + "X" + i + "Y" +j);
-            square[j + gridSize * i].style.display = "inline-block";
-            square[j + gridSize * i].style.verticalAlign = "top";
+            //square[j + gridSize * i].style.display = "inline-block";
+            //square[j + gridSize * i].style.verticalAlign = "top";
             square[j + gridSize * i].mouseenterCounter = 0;
             element.appendChild(square[j + gridSize * i]);
 
@@ -36,18 +37,18 @@ function createGrid(){
             });
         }
 
-        
+         
     }
 }
 
 function clearGrid(){
     gridSize = prompt("Please enter the grid size", "16");
-
+    element.style.gridTemplateColumns = "repeat(" + gridSize + ", 1fr)";
     if(gridSize != null){
         square.forEach( s => {
             element.removeChild(s);
         });
-        squareHeightWidth = 100 / gridSize;
+        //squareHeightWidth = 100 / gridSize;
         createGrid();
     }
 

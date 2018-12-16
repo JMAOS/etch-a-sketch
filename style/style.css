@@ -5,17 +5,58 @@
   }
   
 html, body{
-    height: 100%;
     width: 100%;
+    height: 100vh;
     background-color: brown;
+    font-family: 'Staatliches', cursive;
 }
+#titleClearContainer{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+
+#title{
+margin-left: 5%;
+font-size: 400%;
+color: transparent;
+background-image:  url("../img/greyscale.jpg");
+background-clip: text;
+-webkit-background-clip: text;
+animation: moveBackground 5s linear infinite;
+-webkit-animation: moveBackground 5s linear infinite;
+
+}
+/* Background animation */
+@keyframes moveBackground{
+
+    0% {
+        background-position: 0% 30%;
+    }
+
+    100%{
+        background-position: 100% 50%;
+    }
+}
+
+
+#clearGridBtn{
+    font-family: 'Staatliches', cursive;
+    border: 0.3em solid black;
+    border-radius: 1em;
+    width: 20%;
+    height: 100%;
+    margin-right: 40%;} 
+
 #container{
     position: relative;
-    width: 75%;
-    margin-left: 12.5%;
+    width: 50%;
+    margin-left: 25%;
     border-style: solid;
     border-color: black; 
-    border-width: 10%;
+    border-width: 0.3em;
+    border-radius: 0.3em;
 }
 
 #container::after{
@@ -29,13 +70,6 @@ html, body{
     position: absolute;
     width: 100%;
     height: 100%;
+    display: grid;
 }
 
-#clearGridBtn{
-    background-color: white;
-    border-radius: 20%;
-    height: 2.5%;
-    width: 10%;
-    margin-left: 45%;
-    margin-bottom: 2%;
-} 
